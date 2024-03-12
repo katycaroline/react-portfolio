@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Switch,
     Route,
     Link,
@@ -27,15 +27,14 @@ function Navbar() {
             </div>
 
             <Switch>
-                <Route exact path="/about">
+            <Route exact path="/">
+                    <Redirect to="/about" />
+                </Route>
+                <Route path="/about">
                     <About />
                 </Route>
-                <Route path="/portfolio">
-                    <Portfolio />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
+                <Route path="/portfolio" component={Portfolio} />
+                <Route path="/contact" component={Contact} />
             </Switch>
         </Router>
     );
