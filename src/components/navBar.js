@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import About from './about';
 import Portfolio from '../components/portfolio';
+import Contact from '../components/contact';
 
 function Navbar() {
 
@@ -31,6 +32,9 @@ function Navbar() {
                 </Route>
                 <Route path="/portfolio">
                     <Portfolio />
+                </Route>
+                <Route path="/contact">
+                    <Contact />
                 </Route>
             </Switch>
         </Router>
